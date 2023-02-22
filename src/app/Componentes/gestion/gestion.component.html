@@ -1,0 +1,52 @@
+<div class="container">
+  <div class="container">
+    <button class="btn btn-outline-success" (click)="guardar()">Alta de Usuario</button>
+    <br>
+  </div>
+  <br>
+  <div class="card">
+    <div class="card-header">
+      <h2 class="text-center">Registro de Usuarios</h2>
+    </div>
+    <div class="table-responsive">
+      <table class="table table-hover">
+        <thead>
+          <tr class="text-center">
+            <th> Login</th>
+            <th> Nombre</th>
+            <th> Apellido Paterno</th>
+            <th> Apellido Materno</th>
+            <th> Email</th>
+            <th> Fecha Alta</th>
+            <th> Cliente</th>
+            <th> Area</th>
+            <th> Status</th>
+            <th> Fecha Vigencia</th>
+            <th> Fecha Modificacion</th>
+            <th> Accion</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let u of usuario">
+            <th> {{u.login}}</th>
+            <th> {{u.nombre}}</th>
+            <th> {{u.apellidoPaterno}}</th>
+            <th> {{u.apellidoMaterno}}</th>
+            <th> {{u.email}}</th>
+            <th> {{u.fechaAlta}}</th>
+            <th> {{u.cliente}}</th>
+            <th> {{u.area}}</th>
+            <th> {{u.status}}</th>
+            <th> {{u.fechaVigencia}}</th>
+            <th> {{u.fechaModificacion}}</th>
+            <th>
+                <a class="btn btn-outline-info" (click)="editar(u)">Editar</a>
+                <a class="btn btn-outline-info" (click)="eliminar(u)">Eliminar</a>
+            </th>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
+

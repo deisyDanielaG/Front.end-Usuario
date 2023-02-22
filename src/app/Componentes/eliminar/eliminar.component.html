@@ -1,0 +1,33 @@
+<div class="container">
+    <div class="card">
+      <div class="card-header">
+        <h2>Eliminar Usuario</h2>
+      </div>
+      <div class="card-body">
+        <form>
+          <div class="form-group">
+            <label for="login">Login</label>
+            <input type="text" class="form-control" name="login" [(ngModel)]="usuario.login" disabled="">
+          </div>
+
+          <div class="form-group">
+            <label for="nombre">Nombre</label>
+            <input type="text" class="form-control" name="nombre" [(ngModel)]="usuario.nombre">
+          </div>
+
+          <div class="form-group">
+            <label for="apellidoPaterno">Apellido Paterno</label>
+            <input type="text" class="form-control" name="apellidoPaterno" [(ngModel)]="usuario.apellidoPaterno">
+          </div>
+  
+          <div class="form-group">
+            <label for="apellidoMaterno">Apellido Materno</label>
+            <input type="text" class="form-control" name="apellidoMaterno" [(ngModel)]="usuario.apellidoMaterno">
+          </div>
+          <br>
+          <button class="btn btn-success" (click)="eliminar()">Eliminar</button>
+        </form>
+      </div>
+    </div>
+  </div>
+  
